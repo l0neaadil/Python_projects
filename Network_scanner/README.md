@@ -53,12 +53,16 @@ Ether packets.
 - Both the programs are to be run through command line (linux).
 - Both the programms have been tested on python2.
 - Illustration for running main_scanner.py (through command line) :
+   
    '''
    root@kali:~/PycharmProjects/Network_scanner# python main_scanner.py -t 10.0.2.3
    '''
+   
 - To run scanner_basics.py use command in the form:
+   
    '''
    root@kali:~/PycharmProjects/Network_scanner# python scanner_basics.py
    '''
+   
 - Dont misuse the program.
    
