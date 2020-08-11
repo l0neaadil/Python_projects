@@ -9,11 +9,7 @@
 	
   - How to Run the program (through command line)? :
     <br/> Example:
-<<<<<<< HEAD
-	
-=======
-    
->>>>>>> 03acc2ccf98c01c78e9f09d90cdbbe45ecad24bb
+
 	root@kali:~/PycharmProjects/Mac_changer# python3 simple_mac_changer.py 
 	[Press Enter]
 	
