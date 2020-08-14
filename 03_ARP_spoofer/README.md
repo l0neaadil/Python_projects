@@ -4,6 +4,11 @@
 ARP in a network. To design a python script to create an ARP spoofer, we 
 require the scapy module which is a very powerful packet manipulation tool.
 
+![basic network](https://user-images.githubusercontent.com/68290275/90243271-349ff380-de4c-11ea-8e03-3d1fd2263d60.jpg) 
+![spoofed network](https://user-images.githubusercontent.com/68290275/90243729-0a026a80-de4d-11ea-965f-ce08a17a422e.jpg)
+................These pictures have been taken from zsecurity.org..............
+
+
 ## Scapy:
 
 - Scapy is a library supported by both Python2 and Python3. It is used
