@@ -28,6 +28,15 @@ require the scapy module which is a very powerful packet manipulation tool.
 ARP packets (request or response). By default, if we are calling it, 
 it will create an ARP request packet for us. 
 
+- Send/Receive Functions: Scapy comes with send(), sendp(), sr(), srp(),
+sr1(), and srp1() functions for sending packets and receiving responses.
+The send() functions are used to send  packets while sr() functions are
+used to send  packets when you expect a response back.The p at the end 
+of the function name means that we're sending at L2 instead of L3. The 
+functions with a 1 in them mean that Scapy will send the specified packet
+and end after receiving 1 answer/response instead of continuing to listen
+for answers/responses.
+
 # Steps to create ARP Spoofer:
 
 - Get the MAC address of the IP that we want to spoof.
