@@ -12,9 +12,9 @@ into the Internet.
  
 2. <ins> Trapping all packets in a queue</ins>:
 
-	''' 
-	iptables -I FORWARD -j NFQUEUE --queue-num 0
-	'''
+		''' 
+		iptables -I FORWARD -j NFQUEUE --queue-num 0
+		'''
 
 OR 
 
@@ -35,16 +35,16 @@ to redirect all the forwarded packets into Python.
 
 - To run spoofer.py use command in the form:
    
-	'''
-	root@kali:~/PycharmProjects/DNS_spoofer# python spoofer.py
-	'''
+		'''
+		root@kali:~/PycharmProjects/DNS_spoofer# python spoofer.py
+		'''
    
 4. Don't forget to execute the following command after you are done with 
 DNS_Spoofer.
 
-	'''
-	iptables --flush
-	'''
+		'''
+		iptables --flush
+		'''
    
 ### Note:
 - <ins>netfilterqueue</ins>: For accessing and modifying packets we use netfilterqueue. Whenever
