@@ -5,24 +5,24 @@ causing the name server to return an incorrect result record.
 
 ### Steps to execute the program:
 
-1. <u> Man-in-the-Middle <u>:In order to be a man-in-the-middle, you 
+1. <ins> Man-in-the-Middle</ins>: In order to be a man-in-the-middle, you 
 need to execute the ARP Spoofer, so the victim will be sending the 
 DNS requests to your machine first, instead of directly routing them
 into the Internet.
  
-2. <u> Trapping all packets in a queue <u>:
+2. <ins> Trapping all packets in a queue</ins>:
 
-''' 
-iptables -I FORWARD -j NFQUEUE --queue-num 0
-'''
+	''' 
+	iptables -I FORWARD -j NFQUEUE --queue-num 0
+	'''
 
 OR 
 
-''' 
-iptables -I OUTPUT -j NFQUEUE --queue-num 0
+	''' 
+	iptables -I OUTPUT -j NFQUEUE --queue-num 0
 
-iptables -I INPUT -j NFQUEUE --queue-num 0
-'''
+	iptables -I INPUT -j NFQUEUE --queue-num 0
+	'''
 
 This rule indicates that whenever a packet is forwarded, redirect it 
 ( -j for jump ) to the netfilter queue number 0. This will enable us 
@@ -31,32 +31,32 @@ to redirect all the forwarded packets into Python.
 ![iptables](https://user-images.githubusercontent.com/68290275/90950646-39c6f900-e471-11ea-8e44-27c3175a433f.jpg)
 
 
-3. <u>Run DNS_Spoofer<u>:
+3. <ins>Run DNS_Spoofer</ins>:
 
 - To run spoofer.py use command in the form:
    
-   '''
-   root@kali:~/PycharmProjects/DNS_Spoofer# python spoofer.py
-   '''
+	'''
+	root@kali:~/PycharmProjects/DNS_spoofer# python spoofer.py
+	'''
    
 4. Don't forget to execute the following command after you are done with 
 DNS_Spoofer.
 
-'''
-iptables --flush
-'''
+	'''
+	iptables --flush
+	'''
    
 ### Note:
-- <u>netfilterqueue<u>: For accessing and modifying packets we use netfilterqueue. Whenever
-a new packet is redirected to the netfilter queue,a function (in our
+- <ins>netfilterqueue</ins>: For accessing and modifying packets we use netfilterqueue. Whenever
+a new packet is redirected to the netfilterqueue, a function (in our
 case 'process_packet') is called.
 
 ![netfilterqueue](https://user-images.githubusercontent.com/68290275/90950784-9a0a6a80-e472-11ea-85d5-c1c41a3dd09e.jpg)
 
 
-- <u>get_payload()<u> shows actual contents inside a packet and <u>scapy.IP()<u> converts netfilter queue packet
+- <ins>get_payload()</ins> shows actual contents inside a packet and <ins>scapy.IP()</ins> converts netfilterqueue packet
 to scapy packet.
-- <u>packet.accept()<u> will forward the packet to its destination while <u>packet.drop()<u>
+- <ins>packet.accept()</ins> will forward the packet to its destination while <ins>packet.drop()<ins>
  drops them and does not forward them.
  
 - The program is to be run through command line (linux).
