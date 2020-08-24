@@ -25,7 +25,7 @@ OR
 	'''
 
 This rule indicates that whenever a packet is forwarded, redirect it 
-( -j for jump ) to the netfilter queue number 0. This will enable us 
+( -j for jump ) to the netfilterqueue number 0. This will enable us 
 to redirect all the forwarded packets into Python. 
 
 ![iptables](https://user-images.githubusercontent.com/68290275/90950646-39c6f900-e471-11ea-8e44-27c3175a433f.jpg)
@@ -56,7 +56,7 @@ case 'process_packet') is called.
 
 - <ins>get_payload()</ins> shows actual contents inside a packet and <ins>scapy.IP()</ins> converts netfilterqueue packet
 to scapy packet.
-- <ins>packet.accept()</ins> will forward the packet to its destination while <ins>packet.drop()<ins>
+- <ins>packet.accept()</ins> will forward the packet to its destination while <ins>packet.drop()</ins>
  drops them and does not forward them.
  
 - The program is to be run through command line (linux).
