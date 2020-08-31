@@ -28,7 +28,7 @@ to redirect all the forwarded packets into Python.
 		root@kali:~/PycharmProjects/Code_injector# python injector.py
    
 4. Don't forget to execute the following command after you are done with 
-File_interceptor.
+Code_injector.
 
 		iptables --flush
    
