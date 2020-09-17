@@ -51,5 +51,5 @@ On the receiver account make sure to give permission for receiving mails from le
 apps also.
 
 ### Note:
-- The program has been tested on windows and linux with both python2.7 and python3.8.
+- The program has been tested on windows and linux with python2.7 and python3.8.
 - Dont misuse the program.
