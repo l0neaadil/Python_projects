@@ -24,7 +24,7 @@ SOCK_STREAM for connection-oriented protocols and SOCK_DGRAM for connectionless 
 A server uses <ins>bind()</ins> method which binds it to a specific ip and port. Then the server uses 
 <ins>listen()</ins> method which puts the server into listen mode. This allows the server to listen 
 to incoming connections. And last a server has an accept() and close() method. The <ins>accept()</ins>
-method initiates a connection with the client and the <ins>close</ins> method closes the connection 
+method initiates a connection with the client and the <ins>close()</ins> method closes the connection 
 with the client.
 
 ### Client Socket Methods:
@@ -39,10 +39,10 @@ The client uses <ins>connect()</ins> method in order to connect with the server.
 ## JSON:
 JSON is a syntax for storing and exchanging data. Python has a built-in 
 package called json, which can be used to work with JSON data. 
-- Convertion from JSON to Python: If you have a JSON string, you can parse it by 
+- Conversion from JSON to Python: If you have a JSON string, you can parse it by 
 using the <ins>json.loads()</ins> method.
-- Convertion from Python to JSON: If you have a Python object, you can convert it 
-into a JSON string by using the <ins>json.dumps()<ins> method.
+- Conversion from Python to JSON: If you have a Python object, you can convert it 
+into a JSON string by using the <ins>json.dumps()</ins> method.
 
 ### Note:
 - The program has been tested using python3 on windows machine.
