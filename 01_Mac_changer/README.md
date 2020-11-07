@@ -1,13 +1,15 @@
 # Mac_Changer:
 
   - Program for changing mac address.
-  - Both the programs are to be run through command line (linux).
   
 ## Plan:
 
  Step 1: To give input (interface name and new mac address) through terminal.{optparse module}
+ 
  Step 2: Checking old mac address (the mac address which we will change).{subprocess + re module}
+ 
  Step 3: Changing mac address. {subprocess module}
+ 
  Step 4: Checking for new mac address. 
 
 ## simple_mac_changer:
@@ -56,6 +58,7 @@
 ### Hints and Tips:
 
  - Shebang specifies which program should be called to run the script.
+ 
 		#! interpreter_path
  - parse_args() method of OptionParser returns tuple ({},[]) containing a dictionary and a list.
  - subprocess module is used for accessing system commands. 
@@ -63,5 +66,7 @@
  - re module is used for searching a pattern from a string.
  
 ### Note: 
+ - Both the programs are to be run through command line (linux).
+ 
  - Dont misuse the program.
   
