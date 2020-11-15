@@ -40,8 +40,8 @@ Ether packets.
 		
 - ARP Packet and Ethernet_packet:
 		
-![arp_packet](https://user-images.githubusercontent.com/68290275/99191550-5aae9a00-2793-11eb-8fd7-6ba5b86c4ebc.JPG)
-			
+![Ethernet_Packet](https://user-images.githubusercontent.com/68290275/99192307-373a1e00-2798-11eb-98c0-5258bce53067.png)
+		
 ## Steps for creating Network Scanner:
 
 1. Create an ARP packet using ARP() function.
