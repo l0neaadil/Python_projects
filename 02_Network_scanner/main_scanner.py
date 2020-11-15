@@ -12,10 +12,14 @@ def get_arguments():
 
 
 def scan(ip):
-    arp_part = scapy.ARP(pdst=ip)
-    broadcast_part = scapy.Ether(dst='ff:ff:ff:ff:ff:ff')
-    packet = broadcast_part/arp_part
+    arp_packet = scapy.ARP(pdst=ip)
+    ethernet_packet = scapy.Ether(dst='ff:ff:ff:ff:ff:ff')
+    packet = ethernet_packet/arp_packet
     answered_list = scapy.srp(packet, timeout=3, verbose=False)[0]
+    # For remembering purpose we can say that scapy.srp() returns tuple
+    # with elements being answered_list and unanswered_list and the answered_list
+    # which we are going to deal with contains more fields
+    # ([({}, {}), ({}, {}), ({}, {})], [])
 
     client_list = []
     for element in answered_list:
