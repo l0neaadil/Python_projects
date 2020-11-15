@@ -12,7 +12,7 @@
   functionalities through which we can easily forge and manipulate the 
   packet. Scapy module is not included in Python3 library by default.
   
-- *summary():* This method provide us the status of the packet that we
+- *summary():* This method provides us the status of the packet that we
  have created. It does not provide the detailed information about the 
  packet, it just gives us the basic idea like what is the destination 
  of the packet etc.
@@ -29,7 +29,6 @@ it will create an ARP request packet for us.
 			arp_packet.show()
 			'''
 			
-			for output see 'scanner_basics.py'
 
 - *Ether():* This function defined in scapy module allows us to create 
 Ether packets.
@@ -38,15 +37,18 @@ Ether packets.
             Ethernet_packet = scapy.Ether()
             Ethernet_packet.show()
 			'''
-			
-			for output see 'scanner_basics.py'
+		
+- ARP Packet and Ethernet_packet:
+		
+![arp_packet](https://user-images.githubusercontent.com/68290275/99191550-5aae9a00-2793-11eb-8fd7-6ba5b86c4ebc.JPG)
 			
 ## Steps for creating Network Scanner:
 
-1. Create an ARP packet using ARP() method.
-2. Create an Ethernet packet using Ether() method.
+1. Create an ARP packet using ARP() function.
+2. Create an Ethernet packet using Ether() function.
 3. Combine ARP request packet and Ethernet frame using ‘/’.
-4. Send this to your network and capture the response from different devices.
+4. Send this to your network and capture the response from different devices using srp()
+   function.
 5. Print the IP and MAC address from the response packets.
 
 ### Note:
