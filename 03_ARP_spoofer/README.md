@@ -8,6 +8,21 @@ require the scapy module which is a very powerful packet manipulation tool.
 ![spoofed network](https://user-images.githubusercontent.com/68290275/90243729-0a026a80-de4d-11ea-965f-ce08a17a422e.jpg)
 These pictures have been taken from zsecurity.org.
 
+# Steps to create ARP Spoofer:
+
+- Find the mac address of target.
+- Create ARP response packet having 
+    - destination mac & destination ip of target,  
+	- source ip of gateway  and 
+    - source mac of hacker machine.
+- Send ARP response packet to target.
+- Similarly send ARP response packet to gateway with 
+	- destination mac & destination ip of gateway,  
+	- source ip of target  and 
+    - source mac of hacker machine.
+- Finally, after spoofing re-set the ARP tables of the spoofed addresses to defaults
+  by creating and sending ARP packets having source macs of actual machines. 
+
 
 ## Scapy:
 
@@ -36,16 +51,6 @@ of the function name means that we're sending at L2 instead of L3. The
 functions with a 1 in them mean that Scapy will send the specified packet
 and end after receiving 1 answer/response instead of continuing to listen
 for answers/responses.
-
-# Steps to create ARP Spoofer:
-
-- Find the mac address of target.
-- Create ARP response packet having 
-    - destination mac & ip of target,  
-	- source ip as spoof_ip and 
-    - source mac of hacker machine.
-- Send ARP response to target
-- Finally, after spoofing re-set the ARP tables of the spoofed address to defaults. 
   
   
 ### Note:
@@ -55,7 +60,7 @@ for answers/responses.
    
 - To run spoofer.py use command in the form:
    
-   root@kali:~/PycharmProjects/ARP_spoofer# python spoofer.py
+	root@kali:~/PycharmProjects/ARP_spoofer# python spoofer.py
 
 - The following command is to be run in order to enable ip forwarding
 so that the packet can flow through hackers computer without dropping 
