@@ -4,7 +4,7 @@ Sniffers are programs that can capture/sniff/detect network traffic
 packet by packet and analyse them for various reasons.
 
 # Plan:
-For introductory purpose here we are sniffing HTTP Request packets.
+As for introductory purpose here we are sniffing HTTP Request packets only.
 - Start sniffing by using scapy's sniff() function.
 - Get url of all sites which are called when we click on a link.
 - Get username and password if it is entered.
@@ -49,7 +49,7 @@ for answers/responses.
 		   replace the default packet printing with a format of your choice.
 		   
   
-		scapy.sniff(iface=interface, store=False, prn=callback_function)
+			scapy.sniff(iface=interface, store=False, prn=callback_function)
 
  
  
