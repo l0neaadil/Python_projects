@@ -25,7 +25,7 @@ def sniffed_packet(packet):
         print('\n\n Possible urls are: ' + url + '\n\n')
         login = get_login(packet)
         if login:
-            print('\n\n Possibe username/password: ' + login + '\n\n')
+            print('\n**********\n Possibe username/password: ' + login + '\n***********\n')
 
 
 sniff('eth0')
