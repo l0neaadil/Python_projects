@@ -51,7 +51,21 @@ of the function name means that we're sending at L2 instead of L3. The
 functions with a 1 in them mean that Scapy will send the specified packet
 and end after receiving 1 answer/response instead of continuing to listen
 for answers/responses.
+
+- sniff(): sniff() function can capture/sniff/detect network traffic packet by 
+  packet and analyse them for various reasons. Some of the Sniff() 
+  function arguments are:
+	- iface: Sniff for packets only on the provided interface.
+	- store: Whether to store sniffed packets or discard them. When you 
+             only want to monitor your network forever, set store to 0.
+	- prn: sniff has an argument prn that allows you to pass a function that
+           executes with each packet sniffed. The intended purpose of this function
+           is to control how the packet prints out in the console allowing you to 
+		   replace the default packet printing with a format of your choice.
+		   
   
+		scapy.sniff(iface=interface, store=False, prn=callback_function)
+
   
 ### Note:
 - The program is to be run through command line (linux).
