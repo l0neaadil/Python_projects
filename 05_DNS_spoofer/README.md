@@ -21,9 +21,9 @@ OR
 - For local machine
 
 	 
-	iptables -I OUTPUT -j NFQUEUE --queue-num 0
+		iptables -I OUTPUT -j NFQUEUE --queue-num 0
 
-	iptables -I INPUT -j NFQUEUE --queue-num 0
+		iptables -I INPUT -j NFQUEUE --queue-num 0
 	
 
 This rule indicates that whenever a packet is forwarded, redirect it 
@@ -38,7 +38,7 @@ Pic. from zsecurity.org.
 - To run spoofer.py use command in the form:
    
 		
-		root@kali:~/PycharmProjects/DNS_spoofer# python spoofer.py
+	root@kali:~/PycharmProjects/DNS_spoofer# python spoofer.py
 		
    
 4. Don't forget to execute the following command after you are done with 
