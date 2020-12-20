@@ -4,12 +4,16 @@
 need to execute the ARP Spoofer.
  
 2. <ins> Trapping all packets in a queue</ins>:
+- For remote machine
+
 
 		 
 		iptables -I FORWARD -j NFQUEUE --queue-num 0
 		
 
 OR 
+- For local machine
+
 
 	
 	iptables -I OUTPUT -j NFQUEUE --queue-num 0
@@ -17,13 +21,7 @@ OR
 	iptables -I INPUT -j NFQUEUE --queue-num 0
 	
 
-This rule indicates that whenever a packet is forwarded, redirect it 
-( -j for jump ) to the netfilterqueue number 0. This will enable us 
-to redirect all the forwarded packets into Python. 
 
-![iptables](https://user-images.githubusercontent.com/68290275/90950646-39c6f900-e471-11ea-8e44-27c3175a433f.jpg)
-
-The picture has been taken from zsecurity.org
 
 3. <ins>Run File_interceptor</ins>:
 
@@ -42,6 +40,7 @@ File_interceptor.
    
 ### Note:
 
+- Have a look at DNS Spoofer before using this program.
 - The program is to be run through command line (linux).
 - The program has been tested on python2.
 - Dont misuse the program.
