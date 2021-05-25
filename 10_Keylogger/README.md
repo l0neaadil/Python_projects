@@ -5,6 +5,12 @@ typed on a specific computer's keyboard. Keyloggers are often used as a spyware 
 cybercriminals to steal personally identifiable information (PII), login credentials and
 sensitive enterprise data.
 
+### Steps for creating Keylogger:
+1. Capture keystrokes of a keyboard using pynput.keyboard module.
+2. Form a string of the keystrokes.
+3. Send and clear the string containing the keystrokes to the provided email after a 
+   given interval. To perform step 3 we use smtplib and threading module of python.
+
 ## pynput:
 
 pynput is the library of Python that allows us to control mouse and keyboard. The package
@@ -29,12 +35,12 @@ In the Timer class we have two methods used for starting and cancelling the exec
 
 ## smtplib:
 
-Simple Mail Transfer Protocol (SMTP) is a protocol, which handles sending e-mail and 
-routing e-mail between mail servers. Python provides smtplib module, which defines an
+Simple Mail Transfer Protocol (SMTP) is a protocol which handles sending e-mail and 
+routing e-mail between mail servers. Python provides smtplib module which defines an
 SMTP object that can be used to send mail to any Internet machine.
 
-An SMTP object has an instance method called sendmail, which is typically used to do the
-work of mailing a message. It takes three parameters −
+An SMTP object has an instance method called sendmail(), which is typically used to do the
+work of mailing a message. It takes three parameters:
 
 - The sender − A string with the address of the sender.
 - The receivers − A list of strings, one for each recipient.
