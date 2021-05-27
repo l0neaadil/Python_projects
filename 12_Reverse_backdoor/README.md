@@ -1,9 +1,9 @@
 ## socket:
-Socket programming is a way of connecting two nodes on a network to communicate with each 
-other. One socket(node) listens on a particular port at an IP, while other socket reaches 
-out to the other to form a connection. Server forms the listener socket while client 
+Socket is a way of connecting two nodes on a network to communicate with each 
+other. One socket listens on a particular port at an IP, while other socket reaches 
+out to that port to form a connection. Server forms the listener socket while client 
 reaches out to the server. To create a socket, you must use the socket.socket() function 
-available in socket module, which has the general syntax −
+available in socket module, which has the general syntax:
 
         s = socket.socket (socket_family, socket_type)
 		
@@ -14,7 +14,7 @@ SOCK_STREAM for connection-oriented protocols and SOCK_DGRAM for connectionless 
 ### Server Socket Methods:
 A server uses <ins>bind()</ins> method which binds it to a specific ip and port. Then the server uses 
 <ins>listen()</ins> method which puts the server into listen mode. This allows the server to listen 
-to incoming connections. And last a server has an accept() and close() method. The <ins>accept()</ins>
+to incoming connections. And last, a server has an accept() and close() method. The <ins>accept()</ins>
 method initiates a connection with the client and the <ins>close()</ins> method closes the connection 
 with the client.
 
